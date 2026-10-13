@@ -1,11 +1,15 @@
-function getMessage(name: string): Promise<string> {
-  return new Promise((resolve) => {
+function getMessage(): Promise<string> {
+  return new Promise<string>((resolve) => {
     setTimeout(() => {
-      resolve(`Hello, ${name}!`);
+      resolve("Hello, TypeScript!");
     }, 1000);
   });
 }
 
-getMessage("John Doe")
-  .then((message) => console.log(message))
-  .catch((error) => console.error(error));
+getMessage()
+  .then((result) => {
+    console.log(result);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
