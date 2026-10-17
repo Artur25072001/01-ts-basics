@@ -14,12 +14,10 @@ type Product = {
   readonly id: number;
   description: string;
 };
-const products = [
+const products: Product[] = [
   { id: 1, description: "Product 1" },
   { id: 2, description: "Product 2" },
   { id: 3, description: "Product 3" },
 ];
 const firstProduct = getFirstElement<Product>(products);
 console.log(firstProduct);
-
-getFirstElement(numbers);
